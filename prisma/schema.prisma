@@ -1,6 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
-
+  
 generator client {
   provider = "prisma-client-js"
   output   = "../generated/prisma"
@@ -12,7 +12,7 @@ datasource db {
   // Further reading:
   // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
   // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
-  url      = "postgresql://neondb_owner:npg_nW23cRwPNrhO@ep-super-bread-ad1b9z6u.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+  url      = env("DATABASE_URL")
 }
 
 enum DailyLogStatus {
